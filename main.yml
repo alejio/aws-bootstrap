@@ -151,7 +151,7 @@ Resources :
               - codepipeline.amazonaws.com
               - codedeploy.amazonaws.com
               - codebuild.amazonaws.com
-          Action: sts.AssumeRole
+          Action: sts:AssumeRole
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/PowerUserAccess
 
