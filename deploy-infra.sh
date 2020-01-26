@@ -7,7 +7,7 @@ CLI_PROFILE=awsbootstrap
 EC2_INSTANCE_TYPE=t2.micro
 
 AWS_ACCOUNT_ID=`aws sts get-caller-identity --profile awsbootstrap \
-    -- query "Account" --output text`
+    --query "Account" --output text`
 
 CODEPIPELINE_BUCKET="$STACK_NAME-$REGION-codepipeline-$AWS_ACCOUNT_ID"
 

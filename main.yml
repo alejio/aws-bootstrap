@@ -140,7 +140,7 @@ Resources :
           Value: !Ref AWS::StackName
 
   DeploymentRole:
-    Type: AWS::IAM:Role
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
@@ -245,7 +245,7 @@ Resources :
               RunOrder: 1
 
   PipelineWebhook:
-    Type: AWS::CodePipeline:Webhook
+    Type: AWS::CodePipeline::Webhook
     Properties:
       Authentication: GITHUB_HMAC
       AuthenticationConfiguration:
