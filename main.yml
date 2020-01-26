@@ -183,7 +183,7 @@ Resources :
       ApplicationName: !Ref DeploymentApplication
       DeploymentConfigName: CodeDeployDefault.AllAtOnce
       ServiceRoleArn: !GetAtt DeploymentRole.Arn
-      EC2TagFilters:
+      Ec2TagFilters:
         - Key: aws:cloudformation:stack-name
           Type: KEY_AND_VALUE
           Value: !Ref AWS::StackName
