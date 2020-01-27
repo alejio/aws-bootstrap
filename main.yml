@@ -120,7 +120,6 @@ Resources :
             # Signal to CloudFormation that the instance is ready
             /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --region ${AWS::Region} --resource ${!LOGICAL_ID}
 
-
   InstanceRole:
     Type: "AWS::IAM::Role"
     Properties:
@@ -140,9 +139,9 @@ Resources :
           PolicyDocument:
             Version: 20212-10-17
             Statement:
-            - Effect: Allow
-              Action: 'ec2:DescribeTags'
-              Resource: '*'
+              - Effect: Allow
+                Action: 'ec2:DescribeTags'
+                Resource: '*'
       Tags:
         - Key: Name
           Value: !Ref AWS::StackName
